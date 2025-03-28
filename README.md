@@ -1,4 +1,4 @@
-# Ajalooliste eestikeelsete OCR tekstide järeltöötlus ja paranduste hindamine Rahvusraamatukogu jaoks (2025)
+# Ajalooliste eestikeelsete OCR tekstide järeltöötlus ja kvaliteedi hindamine Eesti Rahvusraamatukogu jaoks (2025)
 
 Autorid: 
 - Mari-Anna Meimer
