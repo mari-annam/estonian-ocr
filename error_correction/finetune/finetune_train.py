@@ -37,7 +37,7 @@ Paranda OCR vead selles eestikeelses tekstis.
 
 # main function for instruction-tuning Llammas-base
 def main(args):
-    # Load config
+    # load config
     config = load_config(args.config)
 
     login("HUGGINGFACE TOKEN")
@@ -96,7 +96,7 @@ def main(args):
     tokenizer.padding_side = "right"
     print(f"Pad token ID: {tokenizer.pad_token_id}, EOS token ID: {tokenizer.eos_token_id}")
     
-    # Instruction-tune model
+    # instruction-tune model
     config["learning_rate"] = float(config["learning_rate"])
     train_args = SFTConfig(
         output_dir=output_dir,
