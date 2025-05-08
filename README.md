@@ -1,5 +1,9 @@
-# Ajalooliste eestikeelsete OCR tekstide järeltöötlus ja kvaliteedi hindamine Eesti Rahvusraamatukogu jaoks (2025)
+# Ajalooliste eestikeelsete OCR tekstide järeltöötluse ja hindamise automatiseerimine Eesti Rahvusraamatukogu jaoks (2025)
+# Automating post-processing and evaluation of historical Estonian OCR texts for the National Library of Estonia (2025)
 
-Autorid: 
+Authors: 
 - Mari-Anna Meimer
 - Loore Lehtmets
+
+Hugging Face:
+- https://huggingface.co/mariannam
