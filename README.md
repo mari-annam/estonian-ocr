@@ -16,3 +16,5 @@ Included in this repository are:
 - Scripts for injecting synthetic errors to ground truths
 - Evaluation tools for model performance
 - Tools to assess how the models perform when used together
+
+For error correction, we explored two approaches: fine-tuning and Direct Preference Optimization (DPO). However, the models published on Hugging Face were trained using fine-tuning only. For evaluation, we've tried both fine-tuning and a Reward Model, but again, only the fine-tuned versions are available on Hugging Face. This is purely due to the fact that the fine-tuned models performed much better in both cases.
