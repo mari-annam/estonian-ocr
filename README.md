@@ -1,5 +1,6 @@
-# Ajalooliste eestikeelsete OCR tekstide järeltöötluse ja hindamise automatiseerimine Eesti Rahvusraamatukogu jaoks (2025, TalTech)
-# Automation of Post-Processing and Evaluation of Historical Estonian OCR Texts for the National Library of Estonia (2025, TalTech)
+# Estonian OCR Post-Processing
+
+Ajalooliste eestikeelsete OCR tekstide järeltöötluse ja hindamise automatiseerimine Eesti Rahvusraamatukogu jaoks (2025, TalTech)
 
 Authors: 
 - Mari-Anna Meimer
