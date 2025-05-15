@@ -33,13 +33,14 @@ For error correction, we explored two approaches: fine-tuning and Direct Prefere
 
 **Data Format**
 - Training input: JSON file (.json)
-    - Format: structured according to fine-tune or DPO (see FT-13k_train.json for fine-tune or dpo_train.json for DPO)
+    - structured according to fine-tune or DPO (see FT-13k_train.json for fine-tune or dpo_train.json for DPO)
 - Testing input: CSV file (.csv)
-    - Format: the same for both fine-tune and DPO (see ocr_data.test)
+    - the same for both fine-tune and DPO (see ocr_data.test)
 
 **Model Selection**
 - Default: tartuNLP/Llammas
 - Alternatively, you can use other pretrained models from Hugging Face or locally stored models (architecture-compatible)
 
-
+**Parameters**
+- We have used temperature=0.7, top_p=0.1, top_k=40 throughout our test codes, but these can be easily changed according to your needs 
 
