@@ -26,3 +26,27 @@ Included in this repository are:
 - Tools to assess how the models perform when used together
 
 For error correction, we explored two approaches: fine-tuning and Direct Preference Optimization (DPO). However, the models published on Hugging Face were trained using fine-tuning only. For evaluation, we've tried both fine-tuning and a Reward Model, but again, only the fine-tuned versions are available on Hugging Face. This is purely due to the fact that the fine-tuned models performed much better in both cases.
+
+## Using the models
+
+### Correction models
+
+**Data Format**
+- Training input: JSON file (.json)
+
+Format: structured according to fine-tune or DPO requirements (see examples in the repo).
+
+Testing input: CSV file (.csv)
+
+Must follow the template provided in test_template.csv.
+
+Model Selection
+
+Default: tartuNLP/Llammas
+
+Alternatively, you can use any other:
+
+Pretrained model from Hugging Face
+
+Locally stored model, as long as it's architecture-compatible
+
