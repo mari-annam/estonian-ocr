@@ -42,5 +42,29 @@ For error correction, we explored two approaches: fine-tuning and Direct Prefere
 - Alternatively, you can use other pretrained models from Hugging Face or locally stored models (architecture-compatible)
 
 **Parameters**
-- We have used temperature=0.7, top_p=0.1, top_k=40 throughout our test codes, but these can be easily changed according to your needs 
+- We have used temperature=0.7, top_p=0.1, top_k=40 throughout our test codes, but these can be easily changed according to your needs
 
+### Grading models
+
+**Data Format**
+- Training input: JSON file (.json)
+    - structured according to the task (see cer_predictor_train.json for CER predictions or prediction_grading_train.json for prediction grading)
+- Testing input: CSV file (.csv)
+    - the same for both grading models (see ocr_data.test)
+
+**Model Selection**
+- Same as for the correction models
+
+**Parameters**
+- Same as for the correction models
+
+### Synthetic errors
+
+**Probability method**
+- Firstly, run align_texts.py to align the OCR and ground truth texts (expected input format: JSON)
+- Then, run find_replacement_probabilities.py and as the input file, use the output of align_texts.py. This will give you a JSON file with all the replacement probabilities in the texts
+-  Finally, you can run synthetic_errors_probability.py to introduce synthetic errors to ground truth texts. The expected inputs are: ground truth texts (JSON) and the replacement probabilities file (JSON)
+
+**Common and random errors methods**
+- The expected input is a JSON file containing ground truth texts
+- The output contains ground truths and the synthetically made OCR texts, also in JSON format
