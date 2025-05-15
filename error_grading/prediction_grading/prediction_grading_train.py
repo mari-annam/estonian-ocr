@@ -33,8 +33,10 @@ PARANDATUD TEKST: {pred}
 def main(args):
     config = load_config(args.config)
 
-
+    # model_name = "model/prediction-grading-test"
     model_name = "tartuNLP/Llammas"
+
+    # change directory names
     output_dir = os.path.join("model", "lammas-prediction-grading")
 
     with open(args.data, "r") as f:
