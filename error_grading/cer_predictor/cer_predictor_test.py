@@ -7,6 +7,7 @@ from datasets import Dataset
 import pandas as pd
 import re
 
+# model_dir = 'tartuNLP/Llammas'
 model_dir = 'model/lammas-cer-predictor'
 
 test = pd.read_csv('ocr_data_test.csv')
@@ -33,6 +34,7 @@ tokenizer.padding_side = "left"
 batch_size = 8
 preds = []
 
+# Was mainly used for first tests when models sometimes returned incoherent text instead of numbers but keeping it as a fallback
 def is_numeric(text):
     """Check if the text contains only a numeric value, optionally followed by '%'."""
     return bool(re.fullmatch(r"\d+%?", text.strip()))
@@ -74,7 +76,7 @@ for i in tqdm(range(0, len(test), batch_size)):
     # First attempt
     batch_preds = generate_prediction(batch)
 
-    # Check if responses are numeric, retry if not
+    # Check if responses are numeric, retry if not. If retry attempt also fails, insert 999
     for j in range(len(batch_preds)):
         if not is_numeric(batch_preds[j]):  
             retry_pred = generate_prediction(Dataset.from_dict({'ocr_text': [batch['ocr_text'][j]]}))[0]  
@@ -84,4 +86,6 @@ for i in tqdm(range(0, len(test), batch_size)):
 
 results_df = test.to_pandas()
 results_df['predicted_score'] = preds
+
+# change filename
 results_df.to_csv('results/cer-predictor-results.csv', index=False)
