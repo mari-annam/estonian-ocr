@@ -68,3 +68,7 @@ For error correction, we explored two approaches: fine-tuning and Direct Prefere
 **Common and random errors methods**
 - The expected input is a JSON file containing ground truth texts
 - The output contains ground truths and the synthetically made OCR texts, also in JSON format
+
+### Evaluation
+- The calculate_metrics.py script expects a CSV file as an input. The file should contain the following  columns: ocr_text, ground_truth, prediction
+- The output file is also given in a CSV format, with the calculated metrics added to the input file
