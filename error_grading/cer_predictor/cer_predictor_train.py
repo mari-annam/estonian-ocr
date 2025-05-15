@@ -34,7 +34,10 @@ Kui suur protsent tähemärke sellest ajaloolisest eestikeelsest tekstist on vig
 def main(args):
     config = load_config(args.config)
 
+    # model_name = 'model/cer_predictor_test'
     model_name = "tartuNLP/Llammas"
+
+    # change dir names
     output_dir = os.path.join("model", "lammas-cer-predictor")
 
     with open(args.data, "r") as f:
