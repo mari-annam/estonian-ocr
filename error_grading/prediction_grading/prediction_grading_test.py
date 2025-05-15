@@ -90,4 +90,6 @@ for i in tqdm(range(0, len(test), batch_size)):
 
 results_df = test.to_pandas()
 results_df['grade_for_prediction'] = preds
+
+# change filename
 results_df.to_csv('results/prediction-grading-results.csv', index=False)
