@@ -72,3 +72,7 @@ For error correction, we explored two approaches: fine-tuning and Direct Prefere
 ### Evaluation
 - The calculate_metrics.py script expects a CSV file as an input. The file should contain the following  columns: ocr_text, ground_truth, prediction
 - The output file is also given in a CSV format, with the calculated metrics added to the input file
+
+### Running the sripts in a Slurm environment
+- You can find config.yaml and run_script.sh files in the root folder
+- In the run_script.sh file we have added a sample config for training and testing the FT-13k model. Change the python scripts and data file according to your needs
