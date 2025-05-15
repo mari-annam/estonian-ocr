@@ -19,4 +19,4 @@ cd ~
 # Run the Python training script
 
 python finetune_train.py --config config.yaml --data FT-13k_train.json
-# python final_test.py
+# python finetune_test.py
